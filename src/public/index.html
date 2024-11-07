@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Replit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              header: "url('./header.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss"></style>
+  </head>
+  <body class="w-screen h-screen">
+    <img
+      alt="header picture"
+      src="./header.jpg"
+      class="object-cover w-screen h-[25vh]"
+    />
+
+    <main class="flex flex-col items-center justify-center h-screen">
+      <div
+        id="main-container"
+        class="flex flex-col items-center justify-start bg-white w-[55vw] h-[70vh] border border-black rounded-3xl" 
+      >
+        <h1 class="uppercase font-bold text-xl">todo list</h1>
+        <div id="task-container" class="flex flex-col">
+          <form id="task-form" class="flex flex-col">
+            <label>Enter your task</label>
+            <input type="text" class="border border-black rounded-md"> 
+          </form>
+           
+          <p>Task 1</p>
+          <p>Task 2</p>
+          <p>Task 3</p>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
