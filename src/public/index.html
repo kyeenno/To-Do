@@ -32,18 +32,23 @@
       >
         <h1 class="uppercase font-bold text-xl">todo list</h1>
         <div id="task-container" class="flex flex-col">
-          <form id="task-form" class="flex flex-col">
-            <label>Enter your task</label>
-            <input type="text" class="border border-black rounded-md"> 
-          </form>
-           
-          <p>Task 1</p>
-          <p>Task 2</p>
-          <p>Task 3</p>
+          <div>
+            <input id="task-input" placeholder="Enter task" class="border border-black p-1 rounded-md">
+            <button id="add-task-button" class="bg-blue-500 text-white p-1 rounded-md">
+              Add Task
+            </button>
+          </div>                         
+          <div>
+            <ul id="task-list">
+              <li>task 1</li>
+              <li>task 2</li>
+              <li>task 3</li>
+            </ul>
+          </div>           
         </div>
       </div>
     </main>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="../script.js"></script>
   </body>
 </html>
