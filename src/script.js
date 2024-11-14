@@ -14,9 +14,19 @@ function AddTask() {
             const newTask = document.createElement('li');
             newTask.textContent = taskText;
             taskList.appendChild(newTask);
+            SaveData();
             taskInput.value = '';
         }
 }
 
+function SaveData() {
+    localStorage.setItem("data", taskList.innerHTML);
+}
+
+function ShowList() {
+    taskList.innerHTML = localStorage.getItem("data");
+}
 
 addTaskButton.addEventListener('click', AddTask);
+
+ShowList();
